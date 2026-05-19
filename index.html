@@ -31,8 +31,6 @@
     font-size: 15px;
     line-height: 1.7;
   }
-
-  /* ── Header ── */
   header {
     background: var(--ink);
     color: var(--paper);
@@ -61,10 +59,7 @@
     line-height: 1.1;
     margin-bottom: 12px;
   }
-  header h1 em {
-    color: var(--red2);
-    font-style: italic;
-  }
+  header h1 em { color: var(--red2); font-style: italic; }
   header p.subtitle {
     color: rgba(250,248,243,0.65);
     font-size: 14px;
@@ -82,11 +77,7 @@
     pointer-events: none;
     font-family: serif;
   }
-
-  /* ── Layout ── */
   main { max-width: 900px; margin: 0 auto; padding: 40px 32px 80px; }
-
-  /* ── Form Card ── */
   .form-card {
     background: #fff;
     border: 1px solid var(--paper3);
@@ -111,7 +102,6 @@
     height: 1px;
     background: var(--paper3);
   }
-
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .form-group { display: flex; flex-direction: column; gap: 6px; }
   .form-group.full { grid-column: 1 / -1; }
@@ -139,8 +129,6 @@
     background: #fff;
   }
   textarea { resize: vertical; min-height: 90px; }
-
-  /* Must-visit chips */
   .chip-area {
     background: var(--paper);
     border: 1px solid var(--paper3);
@@ -186,8 +174,6 @@
     min-width: 120px;
     padding: 2px 4px;
   }
-
-  /* Style selectors */
   .style-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
   .style-option { display: none; }
   .style-label {
@@ -201,6 +187,7 @@
     transition: all 0.15s;
     user-select: none;
     background: var(--paper);
+    display: block;
   }
   .style-label span { display: block; font-size: 20px; margin-bottom: 4px; }
   .style-option:checked + .style-label {
@@ -208,8 +195,6 @@
     background: var(--ink);
     color: var(--paper);
   }
-
-  /* Generate button */
   .btn-generate {
     margin-top: 28px;
     width: 100%;
@@ -233,11 +218,8 @@
   .btn-generate:hover { opacity: 0.9; }
   .btn-generate:active { transform: scale(0.99); }
   .btn-generate:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  /* ── Streaming / Output ── */
   #output-section { display: none; }
   #output-section.visible { display: block; }
-
   .output-header {
     display: flex;
     align-items: baseline;
@@ -267,8 +249,6 @@
     flex-shrink: 0;
   }
   .btn-regenerate:hover { border-color: var(--ink); color: var(--ink); }
-
-  /* Day cards */
   .day-cards { display: flex; flex-direction: column; gap: 24px; }
   .day-card {
     background: #fff;
@@ -303,7 +283,6 @@
   .day-title { font-size: 17px; font-weight: 500; }
   .day-meta { font-size: 12px; opacity: 0.55; margin-top: 1px; }
   .day-card-body { padding: 24px 28px; }
-
   .stop-list { list-style: none; }
   .stop-item {
     display: grid;
@@ -342,12 +321,7 @@
   .stop-must .stop-dot { background: var(--red); }
   .stop-hotel .stop-dot { background: var(--gold); }
   .stop-content { padding-left: 16px; padding-top: 2px; }
-  .stop-name {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.3;
-    margin-bottom: 3px;
-  }
+  .stop-name { font-weight: 500; font-size: 15px; line-height: 1.3; margin-bottom: 3px; }
   .stop-tag {
     display: inline-block;
     font-size: 10px;
@@ -372,8 +346,6 @@
     gap: 4px;
   }
   .stop-duration::before { content: '⏱'; font-size: 10px; }
-
-  /* Summary bar */
   .summary-bar {
     background: var(--paper2);
     border: 1px solid var(--paper3);
@@ -394,10 +366,8 @@
     margin-bottom: 2px;
   }
   .summary-stat strong { font-size: 18px; font-weight: 500; }
-
-  /* Tips section */
   .tips-card {
-    background: linear-gradient(135deg, var(--ink) 0%, #2d2520 100%);
+    background: var(--ink);
     color: var(--paper);
     border-radius: 4px;
     padding: 28px 32px;
@@ -413,13 +383,7 @@
   .tips-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .tips-list li { font-size: 13px; color: rgba(250,248,243,0.8); padding-left: 16px; position: relative; }
   .tips-list li::before { content: '—'; position: absolute; left: 0; color: var(--red2); }
-
-  /* Loading state */
-  .loading-overlay {
-    text-align: center;
-    padding: 60px 32px;
-    color: var(--ink3);
-  }
+  .loading-overlay { text-align: center; padding: 60px 32px; color: var(--ink3); }
   .loading-spinner {
     width: 36px; height: 36px;
     border: 2px solid var(--paper3);
@@ -431,17 +395,12 @@
   @keyframes spin { to { transform: rotate(360deg); } }
   .loading-text { font-size: 14px; font-style: italic; }
   .loading-messages { font-size: 12px; color: var(--ink3); margin-top: 8px; }
-
-  /* Stream output raw */
   .stream-raw {
     font-size: 14px;
     line-height: 1.8;
     color: var(--ink);
     white-space: pre-wrap;
-    padding: 0;
   }
-
-  /* Error */
   .error-box {
     background: #fff0ef;
     border: 1px solid var(--red2);
@@ -450,8 +409,6 @@
     color: var(--red);
     font-size: 13px;
   }
-
-  /* Print */
   .btn-print {
     background: none;
     border: 1px solid var(--paper3);
@@ -466,7 +423,6 @@
     transition: all 0.15s;
   }
   .btn-print:hover { border-color: var(--ink); color: var(--ink); }
-
   @media (max-width: 640px) {
     main { padding: 24px 16px 60px; }
     .form-card { padding: 24px 20px; }
@@ -496,7 +452,6 @@
 </header>
 
 <main>
-  <!-- ── Input Form ── -->
   <div class="form-card">
     <h2>Your Trip Details</h2>
     <div class="form-grid">
@@ -521,69 +476,39 @@
           <option value="5+">5+ people / group</option>
         </select>
       </div>
-
       <div class="form-group full">
-        <label>Hotel / Base(s) in Japan <span style="font-size:10px;opacity:0.5;text-transform:none;letter-spacing:0">(optional — helps plan your daily route)</span></label>
+        <label>Hotel / Base(s) in Japan <span style="font-size:10px;opacity:0.5;text-transform:none;letter-spacing:0">(optional)</span></label>
         <input type="text" id="hotelName" placeholder="e.g. Shinjuku, Tokyo for nights 1-4 · Arashiyama, Kyoto for nights 5-7" />
       </div>
-
       <div class="form-group full">
         <label>Must-Visit Places <span style="font-size:10px;opacity:0.5;text-transform:none;letter-spacing:0">— press Enter to add each</span></label>
         <div class="chip-area" id="chipArea" onclick="document.getElementById('chipInput').focus()">
           <input class="chip-input" id="chipInput" type="text" placeholder="Type a place and press Enter…" />
         </div>
       </div>
-
       <div class="form-group full">
         <label>Travel Style</label>
         <div class="style-grid">
-          <div>
-            <input type="checkbox" class="style-option" id="s1" value="culture" />
-            <label class="style-label" for="s1"><span>⛩️</span>Culture & History</label>
-          </div>
-          <div>
-            <input type="checkbox" class="style-option" id="s2" value="nature" />
-            <label class="style-label" for="s2"><span>🌸</span>Nature & Outdoors</label>
-          </div>
-          <div>
-            <input type="checkbox" class="style-option" id="s3" value="food" />
-            <label class="style-label" for="s3"><span>🍜</span>Food & Drink</label>
-          </div>
-          <div>
-            <input type="checkbox" class="style-option" id="s4" value="shopping" />
-            <label class="style-label" for="s4"><span>🛍️</span>Shopping & City</label>
-          </div>
-          <div>
-            <input type="checkbox" class="style-option" id="s5" value="relaxation" />
-            <label class="style-label" for="s5"><span>♨️</span>Onsen & Relax</label>
-          </div>
-          <div>
-            <input type="checkbox" class="style-option" id="s6" value="anime" />
-            <label class="style-label" for="s6"><span>🎌</span>Anime & Pop Culture</label>
-          </div>
-          <div>
-            <input type="checkbox" class="style-option" id="s7" value="luxury" />
-            <label class="style-label" for="s7"><span>💎</span>Luxury & Refined</label>
-          </div>
-          <div>
-            <input type="checkbox" class="style-option" id="s8" value="budget" />
-            <label class="style-label" for="s8"><span>💴</span>Budget-Friendly</label>
-          </div>
+          <div><input type="checkbox" class="style-option" id="s1" value="culture" /><label class="style-label" for="s1"><span>⛩️</span>Culture &amp; History</label></div>
+          <div><input type="checkbox" class="style-option" id="s2" value="nature" /><label class="style-label" for="s2"><span>🌸</span>Nature &amp; Outdoors</label></div>
+          <div><input type="checkbox" class="style-option" id="s3" value="food" /><label class="style-label" for="s3"><span>🍜</span>Food &amp; Drink</label></div>
+          <div><input type="checkbox" class="style-option" id="s4" value="shopping" /><label class="style-label" for="s4"><span>🛍️</span>Shopping &amp; City</label></div>
+          <div><input type="checkbox" class="style-option" id="s5" value="relaxation" /><label class="style-label" for="s5"><span>♨️</span>Onsen &amp; Relax</label></div>
+          <div><input type="checkbox" class="style-option" id="s6" value="anime" /><label class="style-label" for="s6"><span>🎌</span>Anime &amp; Pop Culture</label></div>
+          <div><input type="checkbox" class="style-option" id="s7" value="luxury" /><label class="style-label" for="s7"><span>💎</span>Luxury &amp; Refined</label></div>
+          <div><input type="checkbox" class="style-option" id="s8" value="budget" /><label class="style-label" for="s8"><span>💴</span>Budget-Friendly</label></div>
         </div>
       </div>
-
       <div class="form-group full">
         <label>Any Other Notes <span style="font-size:10px;opacity:0.5;text-transform:none;letter-spacing:0">(dietary needs, mobility, special interests, etc.)</span></label>
-        <textarea id="notes" placeholder="e.g. We're vegetarian. One member uses a wheelchair. We love jazz bars. We want to see cherry blossoms if possible."></textarea>
+        <textarea id="notes" placeholder="e.g. We're vegetarian. One member uses a wheelchair. We love jazz bars."></textarea>
       </div>
     </div>
-
     <button class="btn-generate" id="generateBtn" onclick="generateItinerary()">
       <span id="btnText">✦ Generate My Itinerary</span>
     </button>
   </div>
 
-  <!-- ── Output Section ── -->
   <section id="output-section">
     <div class="output-header">
       <h2 id="outputTitle">Your Japan Itinerary</h2>
@@ -597,10 +522,9 @@
 </main>
 
 <script>
-// ── Chip input ──
 const mustVisit = [];
 const chipInput = document.getElementById('chipInput');
-const chipArea = document.getElementById('chipArea');
+const chipArea  = document.getElementById('chipArea');
 
 chipInput.addEventListener('keydown', e => {
   if ((e.key === 'Enter' || e.key === ',') && chipInput.value.trim()) {
@@ -618,8 +542,7 @@ function addChip(text) {
   mustVisit.push(text);
   const chip = document.createElement('div');
   chip.className = 'chip';
-  chip.dataset.idx = idx;
-  chip.innerHTML = `${text} <button class="chip-remove" onclick="removeChip(${idx})">×</button>`;
+  chip.innerHTML = text + ' <button class="chip-remove" onclick="removeChip(' + idx + ')">×</button>';
   chipArea.insertBefore(chip, chipInput);
 }
 
@@ -633,16 +556,15 @@ function renderChips() {
   mustVisit.forEach((t, i) => {
     const chip = document.createElement('div');
     chip.className = 'chip';
-    chip.innerHTML = `${t} <button class="chip-remove" onclick="removeChip(${i})">×</button>`;
+    chip.innerHTML = t + ' <button class="chip-remove" onclick="removeChip(' + i + ')">×</button>';
     chipArea.insertBefore(chip, chipInput);
   });
 }
 
-// ── Date helpers ──
 function calcDays(start, end) {
   if (!start || !end) return null;
   const d = (new Date(end) - new Date(start)) / 86400000;
-  return d > 0 ? d + 1 : null; // inclusive
+  return d > 0 ? d + 1 : null;
 }
 
 function formatDate(dateStr) {
@@ -650,49 +572,87 @@ function formatDate(dateStr) {
   return new Date(dateStr + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
-// ── Main generator ──
 async function generateItinerary() {
-  const startDate = document.getElementById('startDate').value;
-  const endDate = document.getElementById('endDate').value;
-  const homeCity = document.getElementById('homeCity').value.trim();
-  const hotelName = document.getElementById('hotelName').value.trim();
+  const startDate    = document.getElementById('startDate').value;
+  const endDate      = document.getElementById('endDate').value;
+  const homeCity     = document.getElementById('homeCity').value.trim();
+  const hotelName    = document.getElementById('hotelName').value.trim();
   const numTravelers = document.getElementById('numTravelers').value;
-  const notes = document.getElementById('notes').value.trim();
+  const notes        = document.getElementById('notes').value.trim();
+  const styles       = Array.from(document.querySelectorAll('.style-option:checked')).map(c => c.value);
+  const days         = calcDays(startDate, endDate);
 
-  const styles = Array.from(document.querySelectorAll('.style-option:checked')).map(c => c.value);
-  const days = calcDays(startDate, endDate);
+  if (!startDate || !endDate || !days) { alert('Please select your travel dates.'); return; }
+  if (days > 30) { alert('Please select a trip of 30 days or fewer.'); return; }
 
-  if (!startDate || !endDate || !days) {
-    alert('Please select your travel dates.');
-    return;
-  }
-  if (days > 30) {
-    alert('Please select a trip of 30 days or fewer.');
-    return;
-  }
-
-  // Update UI
-  const btn = document.getElementById('generateBtn');
+  const btn     = document.getElementById('generateBtn');
   const btnText = document.getElementById('btnText');
-  btn.disabled = true;
+  btn.disabled  = true;
   btnText.textContent = '✦ Planning your journey…';
 
   const outputSection = document.getElementById('output-section');
   const outputContent = document.getElementById('outputContent');
-  const outputTitle = document.getElementById('outputTitle');
+  const outputTitle   = document.getElementById('outputTitle');
 
   outputSection.classList.add('visible');
-  outputTitle.textContent = `${days}-Day Japan Itinerary`;
-  outputContent.innerHTML = `
-    <div class="loading-overlay">
-      <div class="loading-spinner"></div>
-      <p class="loading-text">Crafting your personalized journey…</p>
-      <p class="loading-messages">Calculating travel times · Planning routes · Finding local gems</p>
-    </div>`;
+  outputTitle.textContent = days + '-Day Japan Itinerary';
+  outputContent.innerHTML = '<div class="loading-overlay"><div class="loading-spinner"></div><p class="loading-text">Crafting your personalized journey…</p><p class="loading-messages">Calculating travel times · Planning routes · Finding local gems</p></div>';
   outputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-  // Build prompt
-  const prompt = buildPrompt({ startDate, endDate, days, homeCity, hotelName, numTravelers, styles, mustVisit, notes });
+  const promptParts = [
+    'Please create a detailed ' + days + '-day Japan itinerary.',
+    'Travel dates: ' + formatDate(startDate) + ' to ' + formatDate(endDate) + ' (' + days + ' days).',
+    homeCity     ? 'Traveler is arriving from: ' + homeCity + '.' : '',
+    'Number of travelers: ' + numTravelers + '.',
+    hotelName    ? 'Accommodation/base: ' + hotelName + '.' : '',
+    mustVisit.length ? 'Must-visit places (prioritize these): ' + mustVisit.join(', ') + '.' : '',
+    styles.length    ? 'Travel style preferences: ' + styles.join(', ') + '.' : '',
+    notes        ? 'Additional notes: ' + notes : '',
+  ].filter(Boolean).join('\n');
+
+  const SYSTEM_PROMPT = `You are an expert Japan travel planner with deep knowledge of Japanese geography, transportation, culture, and tourism. You create detailed, practical, and inspiring itineraries for foreign visitors.
+
+Respond with a JSON object only — no markdown, no backticks, no explanation. Use this exact structure:
+
+{
+  "summary": {
+    "title": "evocative trip title",
+    "overview": "2-3 sentence overview",
+    "totalDistance": "e.g. ~800 km",
+    "mainRegions": ["Tokyo", "Kyoto"],
+    "tips": ["tip1", "tip2", "tip3", "tip4", "tip5"]
+  },
+  "days": [
+    {
+      "dayNumber": 1,
+      "date": "Monday, Oct 14",
+      "theme": "short poetic theme",
+      "region": "Tokyo",
+      "stops": [
+        {
+          "time": "9:00",
+          "name": "Place Name",
+          "type": "attraction",
+          "duration": "2 hours",
+          "description": "1-2 sentence description with practical tips",
+          "isMust": false,
+          "isHotel": false
+        }
+      ],
+      "dailyNote": "1 sentence practical tip for the day"
+    }
+  ]
+}
+
+Rules:
+- type must be one of: must-visit, hotel, food, transport, attraction, activity
+- Include travel time between stops as type transport
+- Each day: 5-8 stops including at least 1 meal (type food)
+- Include must-visit places prominently, mark isMust true
+- Mark hotel stops isHotel true
+- Factor hotel location to minimize backtracking
+- For multi-city trips include travel day logistics
+- Return ONLY valid JSON, nothing else`;
 
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
@@ -708,21 +668,19 @@ async function generateItinerary() {
         max_tokens: 4000,
         stream: true,
         system: SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: prompt }],
+        messages: [{ role: 'user', content: promptParts }],
       }),
     });
 
     if (!response.ok) {
       const err = await response.json().catch(() => ({}));
-      throw new Error(err.error?.message || `API error ${response.status}`);
+      throw new Error(err.error && err.error.message ? err.error.message : 'API error ' + response.status);
     }
 
-    // Stream
     outputContent.innerHTML = '<div class="stream-raw" id="streamRaw"></div>';
     const streamEl = document.getElementById('streamRaw');
     let fullText = '';
-
-    const reader = response.body.getReader();
+    const reader  = response.body.getReader();
     const decoder = new TextDecoder();
     let buffer = '';
 
@@ -738,183 +696,110 @@ async function generateItinerary() {
         if (data === '[DONE]') continue;
         try {
           const json = JSON.parse(data);
-          if (json.type === 'content_block_delta' && json.delta?.text) {
+          if (json.type === 'content_block_delta' && json.delta && json.delta.text) {
             fullText += json.delta.text;
             streamEl.textContent = fullText;
           }
-        } catch {}
+        } catch(e) {}
       }
     }
 
-    // Parse & render
-    outputContent.innerHTML = renderItinerary(fullText, { days, startDate, endDate, mustVisit });
+    outputContent.innerHTML = renderItinerary(fullText, { days: days, mustVisit: mustVisit });
 
   } catch (err) {
-    outputContent.innerHTML = `<div class="error-box">⚠️ ${err.message}<br/><small>Please check your API key and try again.</small></div>`;
+    outputContent.innerHTML = '<div class="error-box">⚠️ ' + err.message + '<br/><small>Please check your API key and try again.</small></div>';
   }
 
   btn.disabled = false;
   btnText.textContent = '✦ Generate My Itinerary';
 }
 
-// ── Prompt builder ──
-function buildPrompt({ startDate, endDate, days, homeCity, hotelName, numTravelers, styles, mustVisit, notes }) {
-  const parts = [
-    `Please create a detailed ${days}-day Japan itinerary.`,
-    `Travel dates: ${formatDate(startDate)} to ${formatDate(endDate)} (${days} days).`,
-    homeCity ? `Traveler is arriving from: ${homeCity}.` : '',
-    `Number of travelers: ${numTravelers}.`,
-    hotelName ? `Accommodation/base: ${hotelName}.` : '',
-    mustVisit.length ? `Must-visit places (prioritize these): ${mustVisit.join(', ')}.` : '',
-    styles.length ? `Travel style preferences: ${styles.join(', ')}.` : '',
-    notes ? `Additional notes: ${notes}` : '',
-  ].filter(Boolean).join('\n');
-  return parts;
-}
-
-// ── System prompt ──
-const SYSTEM_PROMPT = `You are an expert Japan travel planner with deep knowledge of Japanese geography, transportation, culture, and tourism. You create detailed, practical, and inspiring itineraries for foreign visitors.
-
-For each itinerary, respond with a JSON object (no markdown, no backticks — pure JSON). Structure:
-
-{
-  "summary": {
-    "title": "string — evocative trip title",
-    "overview": "string — 2-3 sentence overview",
-    "totalDistance": "string e.g. ~800 km",
-    "mainRegions": ["Tokyo", "Kyoto", ...],
-    "tips": ["tip1", "tip2", "tip3", "tip4", "tip5"]
-  },
-  "days": [
-    {
-      "dayNumber": 1,
-      "date": "Monday, Oct 14",
-      "theme": "string — short poetic theme",
-      "region": "Tokyo",
-      "stops": [
-        {
-          "time": "9:00",
-          "name": "Place Name",
-          "type": "must-visit | hotel | food | transport | attraction | activity",
-          "duration": "2 hours",
-          "description": "1-2 sentence description with practical tips",
-          "isMust": true/false,
-          "isHotel": true/false
-        }
-      ],
-      "dailyNote": "1 sentence practical tip for the day"
-    }
-  ]
-}
-
-Rules:
-- Be realistic with timing — include travel time between stops as "transport" stops
-- Each day should have 5-8 stops including meals (mark food stops as type: "food")
-- Respect the must-visit places by including them prominently
-- Factor in the hotel location to minimize backtracking
-- Include at least 1 meal stop per day
-- For multi-city trips, include travel day logistics
-- Provide estimated durations for every stop
-- Add local insider tips in descriptions
-- Return ONLY valid JSON, nothing else`;
-
-// ── Render parsed itinerary ──
-function renderItinerary(rawText, { days, startDate, mustVisit }) {
+function renderItinerary(rawText, opts) {
+  const days      = opts.days;
+  const mustVisit = opts.mustVisit;
   let data;
   try {
-    const clean = rawText.replace(/```json|```/g, '').trim();
+    const clean = rawText.replace(/```json/g, '').replace(/```/g, '').trim();
     data = JSON.parse(clean);
-  } catch (e) {
-    // Fallback: show raw text nicely
-    return `<div style="background:#fff;border:1px solid var(--paper3);border-radius:4px;padding:32px;white-space:pre-wrap;font-size:14px;line-height:1.8;">${rawText}</div>`;
+  } catch(e) {
+    return '<div style="background:#fff;border:1px solid var(--paper3);border-radius:4px;padding:32px;white-space:pre-wrap;font-size:14px;line-height:1.8;">' + rawText + '</div>';
   }
 
-  const s = data.summary || {};
-  const daysList = data.days || [];
-
+  const s        = data.summary || {};
+  const daysList = data.days    || [];
   let html = '';
 
-  // Summary bar
-  html += `
-  <div class="summary-bar">
-    <div class="summary-stat"><small>Duration</small><strong>${days} Days</strong></div>
-    <div class="summary-stat"><small>Regions</small><strong>${(s.mainRegions || []).join(' · ') || '—'}</strong></div>
-    <div class="summary-stat"><small>Total Distance</small><strong>${s.totalDistance || '—'}</strong></div>
-  </div>`;
+  html += '<div class="summary-bar">';
+  html += '<div class="summary-stat"><small>Duration</small><strong>' + days + ' Days</strong></div>';
+  html += '<div class="summary-stat"><small>Regions</small><strong>' + ((s.mainRegions || []).join(' · ') || '—') + '</strong></div>';
+  html += '<div class="summary-stat"><small>Total Distance</small><strong>' + (s.totalDistance || '—') + '</strong></div>';
+  html += '</div>';
 
   if (s.overview) {
-    html += `<p style="font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:28px;">${s.overview}</p>`;
+    html += '<p style="font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:28px;">' + s.overview + '</p>';
   }
 
-  // Day cards
   html += '<div class="day-cards">';
-  daysList.forEach(day => {
+  daysList.forEach(function(day) {
     const stops = day.stops || [];
     let stopsHtml = '';
-    stops.forEach(stop => {
-      const isMust = stop.isMust || mustVisit.some(m => stop.name.toLowerCase().includes(m.toLowerCase()));
-      const isHotel = stop.isHotel || stop.type === 'hotel';
-      const isFood = stop.type === 'food';
-      const isTransport = stop.type === 'transport';
+
+    stops.forEach(function(stop) {
+      const isMust     = stop.isMust || mustVisit.some(function(m){ return stop.name.toLowerCase().indexOf(m.toLowerCase()) !== -1; });
+      const isHotel    = stop.isHotel || stop.type === 'hotel';
+      const isFood     = stop.type === 'food';
+      const isTransport= stop.type === 'transport';
 
       let tags = '';
-      if (isMust) tags += `<span class="stop-tag tag-must">Must-visit</span>`;
-      if (isHotel) tags += `<span class="stop-tag tag-hotel">Hotel</span>`;
-      if (isFood) tags += `<span class="stop-tag tag-food">Food</span>`;
-      if (isTransport) tags += `<span class="stop-tag tag-transport">Transit</span>`;
+      if (isMust)      tags += '<span class="stop-tag tag-must">Must-visit</span>';
+      if (isHotel)     tags += '<span class="stop-tag tag-hotel">Hotel</span>';
+      if (isFood)      tags += '<span class="stop-tag tag-food">Food</span>';
+      if (isTransport) tags += '<span class="stop-tag tag-transport">Transit</span>';
 
-      stopsHtml += `
-      <li class="stop-item ${isMust ? 'stop-must' : ''} ${isHotel ? 'stop-hotel' : ''}">
-        <div class="stop-time">${stop.time || ''}</div>
-        <div class="stop-dot"></div>
-        <div class="stop-content">
-          <div class="stop-name">${stop.name}</div>
-          ${tags ? `<div>${tags}</div>` : ''}
-          ${stop.description ? `<div class="stop-desc">${stop.description}</div>` : ''}
-          ${stop.duration ? `<div class="stop-duration">${stop.duration}</div>` : ''}
-        </div>
-      </li>`;
+      stopsHtml += '<li class="stop-item ' + (isMust ? 'stop-must' : '') + ' ' + (isHotel ? 'stop-hotel' : '') + '">';
+      stopsHtml += '<div class="stop-time">' + (stop.time || '') + '</div>';
+      stopsHtml += '<div class="stop-dot"></div>';
+      stopsHtml += '<div class="stop-content">';
+      stopsHtml += '<div class="stop-name">' + stop.name + '</div>';
+      if (tags) stopsHtml += '<div>' + tags + '</div>';
+      if (stop.description) stopsHtml += '<div class="stop-desc">' + stop.description + '</div>';
+      if (stop.duration)    stopsHtml += '<div class="stop-duration">' + stop.duration + '</div>';
+      stopsHtml += '</div></li>';
     });
 
-    html += `
-    <div class="day-card">
-      <div class="day-card-head">
-        <div class="day-number">${String(day.dayNumber).padStart(2, '0')}</div>
-        <div class="day-info">
-          <div class="day-label">Day ${day.dayNumber}</div>
-          <div class="day-title">${day.theme || day.region || ''}</div>
-          <div class="day-meta">${day.date || ''} · ${day.region || ''}</div>
-        </div>
-      </div>
-      <div class="day-card-body">
-        <ul class="stop-list">${stopsHtml}</ul>
-        ${day.dailyNote ? `<p style="margin-top:16px;font-size:12px;color:var(--ink3);font-style:italic;border-top:1px solid var(--paper3);padding-top:12px;">💡 ${day.dailyNote}</p>` : ''}
-      </div>
-    </div>`;
+    const dayNum = String(day.dayNumber).padStart(2, '0');
+    html += '<div class="day-card">';
+    html += '<div class="day-card-head">';
+    html += '<div class="day-number">' + dayNum + '</div>';
+    html += '<div class="day-info">';
+    html += '<div class="day-label">Day ' + day.dayNumber + '</div>';
+    html += '<div class="day-title">' + (day.theme || day.region || '') + '</div>';
+    html += '<div class="day-meta">' + (day.date || '') + ' · ' + (day.region || '') + '</div>';
+    html += '</div></div>';
+    html += '<div class="day-card-body">';
+    html += '<ul class="stop-list">' + stopsHtml + '</ul>';
+    if (day.dailyNote) {
+      html += '<p style="margin-top:16px;font-size:12px;color:var(--ink3);font-style:italic;border-top:1px solid var(--paper3);padding-top:12px;">💡 ' + day.dailyNote + '</p>';
+    }
+    html += '</div></div>';
   });
   html += '</div>';
 
-  // Tips
   if (s.tips && s.tips.length) {
-    html += `
-    <div class="tips-card">
-      <h3>Local Tips & Practical Notes</h3>
-      <ul class="tips-list">
-        ${s.tips.map(t => `<li>${t}</li>`).join('')}
-      </ul>
-    </div>`;
+    html += '<div class="tips-card"><h3>Local Tips &amp; Practical Notes</h3><ul class="tips-list">';
+    s.tips.forEach(function(t){ html += '<li>' + t + '</li>'; });
+    html += '</ul></div>';
   }
 
   return html;
 }
 
-// ── Set default dates (next month) ──
-window.addEventListener('DOMContentLoaded', () => {
-  const now = new Date();
+window.addEventListener('DOMContentLoaded', function() {
+  const now   = new Date();
   const start = new Date(now.getFullYear(), now.getMonth() + 1, 15);
-  const end = new Date(now.getFullYear(), now.getMonth() + 1, 22);
+  const end   = new Date(now.getFullYear(), now.getMonth() + 1, 22);
   document.getElementById('startDate').value = start.toISOString().split('T')[0];
-  document.getElementById('endDate').value = end.toISOString().split('T')[0];
+  document.getElementById('endDate').value   = end.toISOString().split('T')[0];
 });
 </script>
 </body>
